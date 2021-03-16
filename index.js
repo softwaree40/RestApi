@@ -1,5 +1,5 @@
-const express = require("express");
-const app = express()
+// const express = require("express");
+// const app = express()
 const students = [
     {
     id: 1,
@@ -21,31 +21,31 @@ const students = [
 },
 
 
-]
-// make this api /api/students name
-app.get("/api/students", (req,res)=>{
- res.send(students)
+// ]
+// // make this api /api/students name
+// app.get("/api/students", (req,res)=>{
+//  res.send(students)
  
-})
-app.get("/api/students/:id",(req,res)=>{
-  const student = students.find((studentWithId)=> studentWithId.id === parseInt(req.params.id))
-  !student ? res.send("student is not available") :res.send(student)
+// })
+// app.get("/api/students/:id",(req,res)=>{
+//   const student = students.find((studentWithId)=> studentWithId.id === parseInt(req.params.id))
+//   !student ? res.send("student is not available") :res.send(student)
     
   
-})
-app.post("/api/students",(req,res)=>{
-  const student = {
+// })
+// app.post("/api/students",(req,res)=>{
+//   const student = {
 
-    id: students.length + 1,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    age: req.body.age
-  }
-  students.push(student)
-  res.send(student)
+//     id: students.length + 1,
+//     firstName: req.body.firstName,
+//     lastName: req.body.lastName,
+//     age: req.body.age
+//   }
+//   students.push(student)
+//   res.send(student)
 
-})
+// })
 
-const port = process.env.PORT || 3000
-app.listen(port, ()=> console.log(`Listening on ${port}.......`))
+// const port = process.env.PORT || 3000
+// app.listen(port, ()=> console.log(`Listening on ${port}.......`))
 
