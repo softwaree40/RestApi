@@ -27,12 +27,12 @@ app.get("/api/students", (req,res)=>{
  res.send(students)
  
 })
-// app.get("/api/students/:id",(req,res)=>{
-//   const student = students.find((studentWithId)=> studentWithId.id === parseInt(req.params.id))
-//   !student ? res.send("student is not available") :res.send(student)
+app.get("/api/students/:id",(req,res)=>{
+  const student = students.find((studentWithId)=> studentWithId.id === parseInt(req.params.id))
+  !student ? res.send("student is not available") :res.send(student)
     
   
-// })
+})
 // app.post("/api/students",(req,res)=>{
 //   const student = {
 
