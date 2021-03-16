@@ -22,11 +22,11 @@ const students = [
 
 
 // ]
-// // make this api /api/students name
-// app.get("/api/students", (req,res)=>{
-//  res.send(students)
+// make this api /api/students name
+app.get("/api/students", (req,res)=>{
+ res.send(students)
  
-// })
+})
 // app.get("/api/students/:id",(req,res)=>{
 //   const student = students.find((studentWithId)=> studentWithId.id === parseInt(req.params.id))
 //   !student ? res.send("student is not available") :res.send(student)
